@@ -12,4 +12,5 @@ env/
 .DS_Store
 .idea/
 .vscode/
+manual_runs/
 .venv/

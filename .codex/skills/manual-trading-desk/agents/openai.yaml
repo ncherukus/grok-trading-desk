@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manual Trading Desk"
+  short_description: "Paper-only candidate research and scoring"
+  default_prompt: "Review the supplied market candidate in manual paper-only mode."

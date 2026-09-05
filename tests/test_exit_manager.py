@@ -82,6 +82,8 @@ async def test_works_on_a_crypto_position_too(client_factory):
 def test_position_pnl_math():
     assert POSITION.pnl_usd == pytest.approx(70.0)
     assert POSITION.pnl_pct == pytest.approx(0.14)
-    assert POSITION.hold_time_hours == pytest.approx(6.0, abs=0.01)
+    # POSITION is created during module import, so a full suite may add more
+    # than 36 seconds before this assertion runs on a slower machine.
+    assert 6.0 <= POSITION.hold_time_hours < 6.1
     flat = Position(market=Market.CRYPTO, symbol="X", quantity=1, entry_price=0.0)
     assert flat.pnl_usd == 0.0 and flat.pnl_pct == 0.0

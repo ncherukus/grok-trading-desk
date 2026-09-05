@@ -1,0 +1,8 @@
+{
+  "stock": {"symbol": "DEMO", "price": 25.0, "prev_close": 24.0, "avg_volume": 1000000, "volume": 1800000},
+  "analyst": {"fundamentals_score": 0.6, "technicals_score": 0.7, "summary": "Synthetic example only"},
+  "radar": {"sentiment_score": 0.6, "news_momentum": 0.5, "controversy": 0.1, "summary": "Synthetic example only"},
+  "insider": {"insider_buying": 0.3, "insider_selling": 0.2, "institutional_flow": 0.5, "cluster_buying": false, "summary": "Synthetic example only"},
+  "pulse": {"go_signal": 0.65, "risk_appetite": 0.5, "regime": "synthetic", "notes": "Synthetic example only"},
+  "sources": [{"url": "https://example.com/synthetic", "observed_at": "2026-09-04T21:00:00-04:00", "note": "Not real market data"}]
+}

@@ -220,6 +220,16 @@ Run the tests — they never touch the network:
 pytest -v
 ```
 
+### Subscription-only manual Codex workflow
+
+The repository includes `.codex/skills/manual-trading-desk` for interactive research using an existing Codex subscription, with no xAI or OpenAI API key. Invoke the skill in Codex, provide a stock candidate, and let Codex create a sourced review packet. Validate it with:
+
+```bash
+python scripts/manual_review.py stock --input examples/manual_stock_packet.json
+```
+
+This path never imports an executor, never places orders, labels passing results `REVIEW` rather than `BUY`, and requires a human-started Codex session. It does not run unattended or while the PC is off. `manual_runs/` is ignored so research packets are not committed accidentally.
+
 ### Going live
 
 Paper trading is the default and stays the default unless **both** conditions hold:
